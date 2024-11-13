@@ -5,28 +5,28 @@
 //  Created by James Garcia on 11/13/24.
 //
 
-import Foundation
-
+import SwiftUI
 
 @MainActor
 class RecipeViewModel: ObservableObject {
     @Published var recipes: [Recipe] = []
-    @Published var alertMessage: String? = nil
-    
-    private let networkManager: NetworkManager
-    
-    init(networkManager: NetworkManager = NetworkManager()) {
+    @Published var isLoading: Bool = false
+    @Published var errorMessage: String?
+
+    private let networkManager: NetworkManagerProtocol
+
+    init(networkManager: NetworkManagerProtocol = NetworkManager()) {
         self.networkManager = networkManager
     }
 
     func fetchRecipes() async {
+        isLoading = true
+        defer { isLoading = false }
+
         do {
-            let fetchedRecipes = try await networkManager.fetchRecipes()
-            // Update the recipes list
-            self.recipes = fetchedRecipes
+            recipes = try await networkManager.fetchRecipes()
         } catch {
-            // Set error message for the alert
-            self.alertMessage = "Failed to load recipes. Please try again."
+            errorMessage = "Failed to load recipes. Please try again."
         }
     }
 }

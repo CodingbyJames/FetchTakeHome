@@ -9,9 +9,7 @@ import XCTest
 @testable import FetchTakeHome
 
 
-
 class RecipeViewModelTests: XCTestCase {
-
     var viewModel: RecipeViewModel!
     var mockNetworkManager: MockNetworkManager!
 
@@ -23,25 +21,46 @@ class RecipeViewModelTests: XCTestCase {
     }
 
     @MainActor
-    func testFetchRecipes() async throws {
-        // Simulate a successful fetch
-        mockNetworkManager.shouldFail = false
-
+    func testFetchWithValidData() async throws {
+        mockNetworkManager.dataType = .valid
         await viewModel.fetchRecipes()
-
-        // Verify recipes are not empty
         XCTAssertFalse(viewModel.recipes.isEmpty)
+        XCTAssertNil(viewModel.errorMessage)
     }
 
     @MainActor
-    func testFetchRecipesWithError() async throws {
-        // Simulate a failed fetch
-        mockNetworkManager.shouldFail = true
-
+    func testFetchWithMalformedData() async throws {
+        mockNetworkManager.dataType = .malformed
         await viewModel.fetchRecipes()
+        XCTAssertTrue(viewModel.recipes.isEmpty)
+        XCTAssertNotNil(viewModel.errorMessage) // Should indicate an error occurred
+    }
 
-        // Verify that an error message is shown
-        XCTAssertNotNil(viewModel.alertMessage)
-        XCTAssertEqual(viewModel.alertMessage, "Failed to load recipes. Please try again.")
+    @MainActor
+    func testFetchWithEmptyData() async throws {
+        mockNetworkManager.dataType = .empty
+        await viewModel.fetchRecipes()
+        XCTAssertTrue(viewModel.recipes.isEmpty)
+        XCTAssertNil(viewModel.errorMessage) // No recipes but no error either
+    }
+}
+
+class MockNetworkManager: NetworkManagerProtocol {
+    enum MockDataType: String {
+        case valid = "https://d3jbb8n5wk0qxi.cloudfront.net/recipes.json"
+        case malformed = "https://d3jbb8n5wk0qxi.cloudfront.net/recipes-malformed.json"
+        case empty = "https://d3jbb8n5wk0qxi.cloudfront.net/recipes-empty.json"
+    }
+
+    var dataType: MockDataType = .valid
+
+    func fetchRecipes() async throws -> [Recipe] {
+        guard let url = URL(string: dataType.rawValue) else {
+            throw URLError(.badURL)
+        }
+
+        let (data, _) = try await URLSession.shared.data(from: url)
+        let decodedResponse = try JSONDecoder().decode(RecipeResponse.self, from: data)
+        return decodedResponse.recipes
     }
 }

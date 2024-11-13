@@ -17,7 +17,6 @@
 		9DA90C472CE5050700416C60 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9DA90C462CE5050700416C60 /* Kingfisher */; };
 		9DA90C492CE5058E00416C60 /* AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA90C482CE5058E00416C60 /* AlertMessage.swift */; };
 		9DA90C4B2CE5066B00416C60 /* RecipeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA90C4A2CE5066B00416C60 /* RecipeViewModelTests.swift */; };
-		9DA90C4E2CE50DA800416C60 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA90C4C2CE50D9900416C60 /* MockNetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +49,6 @@
 		9DA90C432CE5034900416C60 /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
 		9DA90C482CE5058E00416C60 /* AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
 		9DA90C4A2CE5066B00416C60 /* RecipeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModelTests.swift; sourceTree = "<group>"; };
-		9DA90C4C2CE50D9900416C60 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MockNetworkManager.swift; path = ../../FetchTakeHomeTests/MockNetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +128,6 @@
 		9DA90C3C2CE5020A00416C60 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				9DA90C4C2CE50D9900416C60 /* MockNetworkManager.swift */,
 				9DA90C3D2CE5022200416C60 /* NetworkManager.swift */,
 			);
 			path = Network;
@@ -294,7 +291,6 @@
 				9DA90C152CE501D200416C60 /* RecipeView.swift in Sources */,
 				9DA90C132CE501D200416C60 /* FetchTakeHomeApp.swift in Sources */,
 				9DA90C442CE5034900416C60 /* RecipeViewModel.swift in Sources */,
-				9DA90C4E2CE50DA800416C60 /* MockNetworkManager.swift in Sources */,
 				9DA90C492CE5058E00416C60 /* AlertMessage.swift in Sources */,
 				9DA90C412CE5029500416C60 /* RecipeModels.swift in Sources */,
 			);

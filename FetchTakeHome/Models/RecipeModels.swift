@@ -7,16 +7,19 @@
 
 import Foundation
 
-struct RecipeResponse: Codable {
-    let recipes: [Recipe]
-}
-
-struct Recipe: Codable {
+struct Recipe: Codable, Identifiable {
+    let id: UUID
     let name: String
     let cuisine: String
     let photo_url_small: String?
-    let photo_url_large: String?
-    let uuid: String
-    let source_url: String?
-    let youtube_url: String?
+
+    enum CodingKeys: String, CodingKey {
+        case id = "uuid"
+        case name, cuisine
+        case photo_url_small
+    }
+}
+
+struct RecipeResponse: Codable {
+    let recipes: [Recipe]
 }
