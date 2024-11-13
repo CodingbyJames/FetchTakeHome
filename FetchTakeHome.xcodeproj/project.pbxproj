@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		9DA90C132CE501D200416C60 /* FetchTakeHomeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA90C122CE501D200416C60 /* FetchTakeHomeApp.swift */; };
-		9DA90C152CE501D200416C60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA90C142CE501D200416C60 /* ContentView.swift */; };
+		9DA90C152CE501D200416C60 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA90C142CE501D200416C60 /* RecipeView.swift */; };
 		9DA90C172CE501D400416C60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DA90C162CE501D400416C60 /* Assets.xcassets */; };
 		9DA90C1A2CE501D400416C60 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DA90C192CE501D400416C60 /* Preview Assets.xcassets */; };
-		9DA90C242CE501D400416C60 /* FetchTakeHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA90C232CE501D400416C60 /* FetchTakeHomeTests.swift */; };
-		9DA90C2E2CE501D400416C60 /* FetchTakeHomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA90C2D2CE501D400416C60 /* FetchTakeHomeUITests.swift */; };
-		9DA90C302CE501D400416C60 /* FetchTakeHomeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA90C2F2CE501D400416C60 /* FetchTakeHomeUITestsLaunchTests.swift */; };
+		9DA90C3E2CE5022200416C60 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA90C3D2CE5022200416C60 /* NetworkManager.swift */; };
+		9DA90C412CE5029500416C60 /* RecipeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA90C402CE5029500416C60 /* RecipeModels.swift */; };
+		9DA90C442CE5034900416C60 /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA90C432CE5034900416C60 /* RecipeViewModel.swift */; };
+		9DA90C472CE5050700416C60 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9DA90C462CE5050700416C60 /* Kingfisher */; };
+		9DA90C492CE5058E00416C60 /* AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA90C482CE5058E00416C60 /* AlertMessage.swift */; };
+		9DA90C4B2CE5066B00416C60 /* RecipeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA90C4A2CE5066B00416C60 /* RecipeViewModelTests.swift */; };
+		9DA90C4E2CE50DA800416C60 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA90C4C2CE50D9900416C60 /* MockNetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +40,17 @@
 /* Begin PBXFileReference section */
 		9DA90C0F2CE501D200416C60 /* FetchTakeHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FetchTakeHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DA90C122CE501D200416C60 /* FetchTakeHomeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTakeHomeApp.swift; sourceTree = "<group>"; };
-		9DA90C142CE501D200416C60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9DA90C142CE501D200416C60 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		9DA90C162CE501D400416C60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DA90C192CE501D400416C60 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9DA90C1F2CE501D400416C60 /* FetchTakeHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FetchTakeHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9DA90C232CE501D400416C60 /* FetchTakeHomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTakeHomeTests.swift; sourceTree = "<group>"; };
 		9DA90C292CE501D400416C60 /* FetchTakeHomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FetchTakeHomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9DA90C2D2CE501D400416C60 /* FetchTakeHomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTakeHomeUITests.swift; sourceTree = "<group>"; };
-		9DA90C2F2CE501D400416C60 /* FetchTakeHomeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTakeHomeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9DA90C3D2CE5022200416C60 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		9DA90C402CE5029500416C60 /* RecipeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModels.swift; sourceTree = "<group>"; };
+		9DA90C432CE5034900416C60 /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
+		9DA90C482CE5058E00416C60 /* AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
+		9DA90C4A2CE5066B00416C60 /* RecipeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModelTests.swift; sourceTree = "<group>"; };
+		9DA90C4C2CE50D9900416C60 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MockNetworkManager.swift; path = ../../FetchTakeHomeTests/MockNetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DA90C472CE5050700416C60 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +84,6 @@
 			children = (
 				9DA90C112CE501D200416C60 /* FetchTakeHome */,
 				9DA90C222CE501D400416C60 /* FetchTakeHomeTests */,
-				9DA90C2C2CE501D400416C60 /* FetchTakeHomeUITests */,
 				9DA90C102CE501D200416C60 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,7 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				9DA90C122CE501D200416C60 /* FetchTakeHomeApp.swift */,
-				9DA90C142CE501D200416C60 /* ContentView.swift */,
+				9DA90C422CE5032100416C60 /* MainScreen */,
+				9DA90C3F2CE5024C00416C60 /* Models */,
+				9DA90C3C2CE5020A00416C60 /* Network */,
 				9DA90C162CE501D400416C60 /* Assets.xcassets */,
 				9DA90C182CE501D400416C60 /* Preview Content */,
 			);
@@ -113,18 +122,36 @@
 		9DA90C222CE501D400416C60 /* FetchTakeHomeTests */ = {
 			isa = PBXGroup;
 			children = (
-				9DA90C232CE501D400416C60 /* FetchTakeHomeTests.swift */,
+				9DA90C4A2CE5066B00416C60 /* RecipeViewModelTests.swift */,
 			);
 			path = FetchTakeHomeTests;
 			sourceTree = "<group>";
 		};
-		9DA90C2C2CE501D400416C60 /* FetchTakeHomeUITests */ = {
+		9DA90C3C2CE5020A00416C60 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				9DA90C2D2CE501D400416C60 /* FetchTakeHomeUITests.swift */,
-				9DA90C2F2CE501D400416C60 /* FetchTakeHomeUITestsLaunchTests.swift */,
+				9DA90C4C2CE50D9900416C60 /* MockNetworkManager.swift */,
+				9DA90C3D2CE5022200416C60 /* NetworkManager.swift */,
 			);
-			path = FetchTakeHomeUITests;
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9DA90C3F2CE5024C00416C60 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9DA90C402CE5029500416C60 /* RecipeModels.swift */,
+				9DA90C482CE5058E00416C60 /* AlertMessage.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9DA90C422CE5032100416C60 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				9DA90C142CE501D200416C60 /* RecipeView.swift */,
+				9DA90C432CE5034900416C60 /* RecipeViewModel.swift */,
+			);
+			path = MainScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +170,9 @@
 			dependencies = (
 			);
 			name = FetchTakeHome;
+			packageProductDependencies = (
+				9DA90C462CE5050700416C60 /* Kingfisher */,
+			);
 			productName = FetchTakeHome;
 			productReference = 9DA90C0F2CE501D200416C60 /* FetchTakeHome.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +245,9 @@
 				Base,
 			);
 			mainGroup = 9DA90C062CE501D200416C60;
+			packageReferences = (
+				9DA90C452CE5050700416C60 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 9DA90C102CE501D200416C60 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +290,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DA90C152CE501D200416C60 /* ContentView.swift in Sources */,
+				9DA90C3E2CE5022200416C60 /* NetworkManager.swift in Sources */,
+				9DA90C152CE501D200416C60 /* RecipeView.swift in Sources */,
 				9DA90C132CE501D200416C60 /* FetchTakeHomeApp.swift in Sources */,
+				9DA90C442CE5034900416C60 /* RecipeViewModel.swift in Sources */,
+				9DA90C4E2CE50DA800416C60 /* MockNetworkManager.swift in Sources */,
+				9DA90C492CE5058E00416C60 /* AlertMessage.swift in Sources */,
+				9DA90C412CE5029500416C60 /* RecipeModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DA90C242CE501D400416C60 /* FetchTakeHomeTests.swift in Sources */,
+				9DA90C4B2CE5066B00416C60 /* RecipeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +312,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DA90C2E2CE501D400416C60 /* FetchTakeHomeUITests.swift in Sources */,
-				9DA90C302CE501D400416C60 /* FetchTakeHomeUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +624,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9DA90C452CE5050700416C60 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9DA90C462CE5050700416C60 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9DA90C452CE5050700416C60 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9DA90C072CE501D200416C60 /* Project object */;
 }
